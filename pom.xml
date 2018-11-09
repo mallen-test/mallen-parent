@@ -15,7 +15,8 @@
         <compiler.plugin.version>3.6.0</compiler.plugin.version>
         <jar.plugin.version>3.0.2</jar.plugin.version>
         <maven.resources.plugin>3.0.2</maven.resources.plugin>
-        <jgitflow.version>1.0-tima-patch-m5.1</jgitflow.version>
+        <apt.plugin.version>1.1.3</apt.plugin.version>
+        <jgitflow-plugin.version>1.0-tima-patch-m5.1</jgitflow-plugin.version>
 
         <slf4j.version>1.7.25</slf4j.version>
         <log4j.version>2.6.2</log4j.version>
@@ -171,6 +172,22 @@
                     <artifactId>spring-boot-maven-plugin</artifactId>
                     <version>${spring-boot.version}</version>
                 </plugin>
+                <!-- jgitflow plugin -->
+                <plugin>
+                    <groupId>external.atlassian.jgitflow</groupId>
+                    <artifactId>jgitflow-maven-plugin</artifactId>
+                    <version>${jgitflow-plugin.version}</version>
+                    <configuration>
+                        <noDeploy>true</noDeploy>
+                        <pushReleases>true</pushReleases>
+                        <autoVersionSubmodules>true</autoVersionSubmodules>
+                    </configuration>
+                </plugin>
+                <plugin>
+                    <groupId>com.mysema.maven</groupId>
+                    <artifactId>apt-maven-plugin</artifactId>
+                    <version>${apt.plugin.version}</version>
+                </plugin>
             </plugins>
         </pluginManagement>
         <plugins>
@@ -182,6 +199,10 @@
                     <target>${java.version}</target>
                     <encoding>${project.build.sourceEncoding}</encoding>
                 </configuration>
+            </plugin>
+            <plugin>
+                <groupId>external.atlassian.jgitflow</groupId>
+                <artifactId>jgitflow-maven-plugin</artifactId>
             </plugin>
         </plugins>
         <!-- 过滤文件夹中的文件，将这些文件中的maven变量替换为maven中的properties对应的值 -->
