@@ -19,9 +19,8 @@
         <jgitflow-plugin.version>1.0-tima-patch-m5.1</jgitflow-plugin.version>
 
         <slf4j.version>1.7.25</slf4j.version>
-        <log4j.version>2.6.2</log4j.version>
+        <log4j.version>2.11.1</log4j.version>
         <log4j1.version>1.2.17</log4j1.version>
-        <jackson.version>2.9.7</jackson.version>
         <spring-boot.version>2.1.0.RELEASE</spring-boot.version>
         <spring-cloud.version>Finchley.SR2</spring-cloud.version>
         <mysql.version>5.1.42</mysql.version>
@@ -65,58 +64,16 @@
                 <version>${c3p0.version}</version>
             </dependency>
             <!-- datasource pool end-->
-            <!--<dependency>-->
-                <!--<groupId>org.slf4j</groupId>-->
-                <!--<artifactId>slf4j-api</artifactId>-->
-                <!--<version>${slf4j.version}</version>-->
-            <!--</dependency>-->
             <dependency>
                 <groupId>org.slf4j</groupId>
                 <artifactId>log4j-over-slf4j</artifactId>
                 <version>${slf4j.version}</version>
             </dependency>
-            <!--<dependency>-->
-                <!--<groupId>org.slf4j</groupId>-->
-                <!--<artifactId>jul-to-slf4j</artifactId>-->
-                <!--<version>${slf4j.version}</version>-->
-            <!--</dependency>-->
-            <!--<dependency>-->
-                <!--<groupId>org.slf4j</groupId>-->
-                <!--<artifactId>jcl-over-slf4j</artifactId>-->
-                <!--<version>${slf4j.version}</version>-->
-            <!--</dependency>-->
-            <!--<dependency>-->
-                <!--<groupId>org.apache.logging.log4j</groupId>-->
-                <!--<artifactId>log4j-api</artifactId>-->
-                <!--<version>${log4j.version}</version>-->
-            <!--</dependency>-->
-            <!--<dependency>-->
-                <!--<groupId>org.apache.logging.log4j</groupId>-->
-                <!--<artifactId>log4j-core</artifactId>-->
-                <!--<version>${log4j.version}</version>-->
-            <!--</dependency>-->
-            <!--<dependency>-->
-                <!--<groupId>org.apache.logging.log4j</groupId>-->
-                <!--<artifactId>log4j-slf4j-impl</artifactId>-->
-                <!--<version>${log4j.version}</version>-->
-            <!--</dependency>-->
-            <!-- jackson -->
             <dependency>
-                <groupId>com.fasterxml.jackson.core</groupId>
-                <artifactId>jackson-core</artifactId>
-                <version>${jackson.version}</version>
+                <groupId>org.apache.logging.log4j</groupId>
+                <artifactId>log4j-web</artifactId>
+                <version>${log4j.version}</version>
             </dependency>
-            <dependency>
-                <groupId>com.fasterxml.jackson.core</groupId>
-                <artifactId>jackson-annotations</artifactId>
-                <version>${jackson.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.fasterxml.jackson.core</groupId>
-                <artifactId>jackson-databind</artifactId>
-                <version>${jackson.version}</version>
-            </dependency>
-            <!-- jackson end -->
             <!-- kafka -->
             <dependency>
                 <groupId>org.apache.kafka</groupId>
