@@ -32,10 +32,18 @@
         <c3p0.version>0.9.5.2</c3p0.version>
         <kafka.version>1.0.0</kafka.version>
         <cglib.version>3.2.10</cglib.version>
+        <mallen-common.version>1.0.0-SNAPSHOT</mallen-common.version>
+        <querydsl.version>4.2.1</querydsl.version>
+        <ehcache.version>3.7.0</ehcache.version>
     </properties>
 
     <dependencyManagement>
         <dependencies>
+            <dependency>
+                <groupId>org.mallen.test</groupId>
+                <artifactId>mallen-common</artifactId>
+                <version>${mallen-common.version}</version>
+            </dependency>
             <dependency>
                 <groupId>log4j</groupId>
                 <artifactId>log4j</artifactId>
@@ -59,8 +67,7 @@
             </dependency>
             <!-- mybatis end -->
             <!-- datasource pool -->
-            <dependency>
-                <groupId>com.mchange</groupId>
+            <dependency>                <groupId>com.mchange</groupId>
                 <artifactId>c3p0</artifactId>
                 <version>${c3p0.version}</version>
             </dependency>
@@ -80,13 +87,32 @@
                 <artifactId>cglib</artifactId>
                 <version>${cglib.version}</version>
             </dependency>
-            <!-- kafka -->
+            <!--&lt;!&ndash; kafka &ndash;&gt;-->
+            <!--<dependency>-->
+                <!--<groupId>org.apache.kafka</groupId>-->
+                <!--<artifactId>kafka-clients</artifactId>-->
+                <!--<version>${kafka.version}</version>-->
+            <!--</dependency>-->
+            <!--&lt;!&ndash; kafka end &ndash;&gt;-->
+            <!-- querydsl -->
             <dependency>
-                <groupId>org.apache.kafka</groupId>
-                <artifactId>kafka-clients</artifactId>
-                <version>${kafka.version}</version>
+                <groupId>com.querydsl</groupId>
+                <artifactId>querydsl-jpa</artifactId>
+                <version>${querydsl.version}</version>
             </dependency>
-            <!-- kafka end -->
+            <dependency>
+                <groupId>com.querydsl</groupId>
+                <artifactId>querydsl-mongodb</artifactId>
+                <version>${querydsl.version}</version>
+            </dependency>
+            <!-- querydsl end -->
+            <!-- ehcache -->
+            <dependency>
+                <groupId>org.ehcache</groupId>
+                <artifactId>ehcache</artifactId>
+                <version>${ehcache.version}</version>
+            </dependency>
+            <!-- ehcache end -->
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter</artifactId>
