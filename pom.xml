@@ -36,7 +36,8 @@
         <mallen-common.version>2.0.1-SNAPSHOT</mallen-common.version>
         <querydsl.version>4.2.1</querydsl.version>
         <cxf.version>3.3.1</cxf.version>
-
+        <poi.version>4.1.0</poi.version>
+        <spring-data-custom.version>2.1.6.RELEASE-mallen</spring-data-custom.version>
     </properties>
 
     <dependencyManagement>
@@ -110,7 +111,7 @@
                 <version>${cxf.version}</version>
             </dependency>
             <!-- cxf end -->
-
+            <!-- querydsl -->
             <dependency>
                 <groupId>com.querydsl</groupId>
                 <artifactId>querydsl-jpa</artifactId>
@@ -122,7 +123,18 @@
                 <version>${querydsl.version}</version>
             </dependency>
             <!-- querydsl end -->
-
+            <!-- 自定义spring data -->
+            <dependency>
+                <groupId>org.springframework.data</groupId>
+                <artifactId>spring-data-commons</artifactId>
+                <version>2.1.6.RELEASE-mallen</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.data</groupId>
+                <artifactId>spring-data-jpa</artifactId>
+                <version>2.1.6.RELEASE-mallen</version>
+            </dependency>
+            <!-- 自定义spring data end -->
             <!-- apache commons -->
             <dependency>
                 <groupId>commons-net</groupId>
@@ -130,6 +142,14 @@
                 <version>${commons-net.version}</version>
             </dependency>
             <!-- apache commons end -->
+            <!-- apache poi -->
+            <dependency>
+                <groupId>org.apache.poi</groupId>
+                <artifactId>poi-ooxml</artifactId>
+                <version>${poi.version}</version>
+            </dependency>
+            <!-- apache poi end -->
+
 
             <dependency>
                 <groupId>org.springframework.boot</groupId>
