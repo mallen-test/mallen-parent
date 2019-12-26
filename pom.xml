@@ -123,22 +123,23 @@
                 <version>${querydsl.version}</version>
             </dependency>
             <!-- querydsl end -->
-            <!-- 自定义spring data -->
-            <dependency>
-                <groupId>org.springframework.data</groupId>
-                <artifactId>spring-data-commons</artifactId>
-                <version>2.1.6.RELEASE-mallen</version>
-            </dependency>
-            <dependency>
-                <groupId>org.springframework.data</groupId>
-                <artifactId>spring-data-jpa</artifactId>
-                <version>2.1.6.RELEASE-mallen</version>
-            </dependency>
-            <dependency>
-                <groupId>org.springframework.data</groupId>
-                <artifactId>spring-data-mongodb</artifactId>
-                <version>2.1.6.RELEASE-mallen</version>
-            </dependency>
+            <!-- 自定义spring data
+            TODO mallen 升级spring boot到2.2.0之后spring data框架有不兼容的问题，暂时不使用自定义功能，而使用官方版本。-->
+<!--            <dependency>-->
+<!--                <groupId>org.springframework.data</groupId>-->
+<!--                <artifactId>spring-data-commons</artifactId>-->
+<!--                <version>2.1.6.RELEASE-mallen</version>-->
+<!--            </dependency>-->
+<!--            <dependency>-->
+<!--                <groupId>org.springframework.data</groupId>-->
+<!--                <artifactId>spring-data-jpa</artifactId>-->
+<!--                <version>2.1.6.RELEASE-mallen</version>-->
+<!--            </dependency>-->
+<!--            <dependency>-->
+<!--                <groupId>org.springframework.data</groupId>-->
+<!--                <artifactId>spring-data-mongodb</artifactId>-->
+<!--                <version>2.1.6.RELEASE-mallen</version>-->
+<!--            </dependency>-->
             <!-- 自定义spring data end -->
             <!-- apache commons -->
             <dependency>
@@ -214,6 +215,7 @@
                         <execution>
                             <goals>
                                 <goal>build-info</goal>
+                                <goal>repackage</goal>
                             </goals>
                         </execution>
                     </executions>
