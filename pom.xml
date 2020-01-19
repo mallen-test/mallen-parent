@@ -38,6 +38,7 @@
         <cxf.version>3.3.1</cxf.version>
         <poi.version>4.1.0</poi.version>
         <spring-data-custom.version>2.1.6.RELEASE-mallen</spring-data-custom.version>
+        <flapdoodle.embed.mongo.version>2.2.0</flapdoodle.embed.mongo.version>
     </properties>
 
     <dependencyManagement>
@@ -155,6 +156,12 @@
                 <version>${poi.version}</version>
             </dependency>
             <!-- apache poi end -->
+            <!-- 嵌入式mongodb -->
+            <dependency>
+                <groupId>de.flapdoodle.embed</groupId>
+                <artifactId>de.flapdoodle.embed.mongo</artifactId>
+                <version>${flapdoodle.embed.mongo.version}</version>
+            </dependency>
 
 
             <dependency>
