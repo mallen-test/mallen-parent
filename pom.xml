@@ -162,7 +162,7 @@
                 <artifactId>de.flapdoodle.embed.mongo</artifactId>
                 <version>${flapdoodle.embed.mongo.version}</version>
             </dependency>
-
+            <!-- 嵌入式mongodb end -->
 
             <dependency>
                 <groupId>org.springframework.boot</groupId>
