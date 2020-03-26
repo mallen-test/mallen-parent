@@ -22,7 +22,7 @@
         <slf4j.version>1.7.29</slf4j.version>
         <log4j.version>2.12.1</log4j.version>
         <log4j1.version>1.2.17</log4j1.version>
-        <spring-boot.version>2.2.2.RELEASE</spring-boot.version>
+        <spring-boot.version>2.2.6.RELEASE</spring-boot.version>
         <spring-cloud.version>Hoxton.RELEASE</spring-cloud.version>
 
         <commons-net.version>3.6</commons-net.version>
