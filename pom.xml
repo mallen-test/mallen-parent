@@ -39,6 +39,7 @@
         <poi.version>4.1.0</poi.version>
         <spring-data-custom.version>2.1.6.RELEASE-mallen</spring-data-custom.version>
         <flapdoodle.embed.mongo.version>2.2.0</flapdoodle.embed.mongo.version>
+        <xxl-job.version>2.2.0</xxl-job.version>
     </properties>
 
     <dependencyManagement>
@@ -62,6 +63,11 @@
                 <groupId>log4j</groupId>
                 <artifactId>log4j</artifactId>
                 <version>${log4j1.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.xuxueli</groupId>
+                <artifactId>xxl-job-core</artifactId>
+                <version>${xxl-job.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.apache.httpcomponents</groupId>
