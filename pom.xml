@@ -66,6 +66,11 @@
                 <version>${mallen-common.version}</version>
             </dependency>
             <dependency>
+                <groupId>org.mallen.test</groupId>
+                <artifactId>mallen-common-rest-client</artifactId>
+                <version>${mallen-common.version}</version>
+            </dependency>
+            <dependency>
                 <groupId>log4j</groupId>
                 <artifactId>log4j</artifactId>
                 <version>${log4j1.version}</version>
