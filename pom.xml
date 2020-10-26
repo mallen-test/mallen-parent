@@ -22,9 +22,9 @@
         <slf4j.version>1.7.29</slf4j.version>
         <log4j.version>2.12.1</log4j.version>
         <log4j1.version>1.2.17</log4j1.version>
-        <spring-boot.version>2.2.6.RELEASE</spring-boot.version>
+        <spring-boot.version>2.2.10.RELEASE</spring-boot.version>
         <spring-cloud.version>Hoxton.RELEASE</spring-cloud.version>
-
+        <spring-cloud-alibaba.version>2.2.1.RELEASE</spring-cloud-alibaba.version>
         <commons-net.version>3.6</commons-net.version>
 
         <httpclient.version>4.5.6</httpclient.version>
@@ -187,6 +187,13 @@
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-dependencies</artifactId>
                 <version>${spring-cloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.alibaba.cloud</groupId>
+                <artifactId>spring-cloud-alibaba-dependencies</artifactId>
+                <version>${spring-cloud-alibaba.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
