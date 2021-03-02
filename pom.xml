@@ -157,17 +157,17 @@
             <dependency>
                 <groupId>org.springframework.data</groupId>
                 <artifactId>spring-data-commons</artifactId>
-                <version>2.1.6.RELEASE-mallen</version>
+                <version>${spring-data-custom.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.springframework.data</groupId>
                 <artifactId>spring-data-jpa</artifactId>
-                <version>2.1.6.RELEASE-mallen</version>
+                <version>${spring-data-custom.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.springframework.data</groupId>
                 <artifactId>spring-data-mongodb</artifactId>
-                <version>2.1.6.RELEASE-mallen</version>
+                <version>${spring-data-custom.version}</version>
             </dependency>
             <!-- 自定义spring data end -->
             <!-- apache commons -->
