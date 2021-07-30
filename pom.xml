@@ -42,6 +42,8 @@
         <flapdoodle.embed.mongo.version>2.2.0</flapdoodle.embed.mongo.version>
         <xxl-job.version>2.2.0</xxl-job.version>
         <guava.version>29.0-jre</guava.version>
+        <!-- spring boot 2.1.4-RELEASE默认的jackson版本(2.9.8)存在反序列化远程执行漏洞，所以升级到该版本 -->
+        <jackson-version>2.12.4</jackson-version>
     </properties>
 
     <dependencyManagement>
@@ -191,6 +193,38 @@
                 <version>${flapdoodle.embed.mongo.version}</version>
             </dependency>
             <!-- 嵌入式mongodb end -->
+            <!-- jackson -->
+            <dependency>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-annotations</artifactId>
+                <version>${jackson-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-core</artifactId>
+                <version>${jackson-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-databind</artifactId>
+                <version>${jackson-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.fasterxml.jackson.datatype</groupId>
+                <artifactId>jackson-datatype-jdk8</artifactId>
+                <version>${jackson-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.fasterxml.jackson.datatype</groupId>
+                <artifactId>jackson-datatype-jsr310</artifactId>
+                <version>${jackson-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.fasterxml.jackson.module</groupId>
+                <artifactId>jackson-module-parameter-names</artifactId>
+                <version>${jackson-version}</version>
+            </dependency>
+            <!-- jackson end -->
 
             <dependency>
                 <groupId>org.springframework.boot</groupId>
